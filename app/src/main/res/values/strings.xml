@@ -1,6 +1,13 @@
 <resources>
     <string name="app_name">My Weather App</string>
     <string name="action_settings">Settings</string>
+    <string name="add_city_title">Add City</string>
     <string name="add_city_hint">City,Country Code (Leiria,PT)</string>
     <string name="something_wrong">Something went wrong!</string>
+    <string name="holder_city_name">Leiria, PT</string>
+    <string name="holder_temp">13,2º</string>
+    <string name="holder_weather_description">Scattered Clouds</string>
+    <string name="dialog_button_add">Add</string>
+    <string name="dialog_button_cancel">Cancel</string>
+    <string name="dialog_tag">add city dialog</string>
 </resources>

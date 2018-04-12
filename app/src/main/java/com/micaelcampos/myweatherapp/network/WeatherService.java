@@ -7,6 +7,7 @@ import com.micaelcampos.myweatherapp.utils.Constants;
 import com.micaelcampos.myweatherapp.utils.ForecastDeserialiser;
 
 import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -18,7 +19,13 @@ public class WeatherService {
                 .registerTypeAdapter(Forecast.class, new ForecastDeserialiser())
                 .create();
 
+        HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+        // set your desired log level
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
+
+
         OkHttpClient httpClient = new OkHttpClient.Builder()
+                .addInterceptor(logging)
                 .build();
 
         // Retrofit
